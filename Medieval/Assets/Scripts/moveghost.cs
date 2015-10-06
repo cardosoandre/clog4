@@ -6,6 +6,7 @@ public class moveghost : MonoBehaviour {
 	public float speed;
 	public GameObject vanish;
 	public GameObject death;
+	public GameObject littlelight;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class moveghost : MonoBehaviour {
 		}
 		Destroy (gameObject);
 		Instantiate (death, transform.position, transform.rotation);
+		Instantiate (littlelight, new Vector3(0, 25, -53), Quaternion.identity);
 		print ("hit");
 	}
 
